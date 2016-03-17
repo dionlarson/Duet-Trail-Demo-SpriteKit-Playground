@@ -23,14 +23,14 @@ redTrail.targetNode = scene
 redPlayer.addChild(redTrail)
 
 //: Create blue player, add to spinNode on right
-let blueNode = SKSpriteNode(color: SKColor.blueColor(), size: CGSize(width: 0, height: 0))
-blueNode.position = CGPoint(x: 120, y: 0)
-spinNode.addChild(blueNode)
+let bluePlayer = SKSpriteNode(color: SKColor.blueColor(), size: CGSize(width: 0, height: 0))
+bluePlayer.position = CGPoint(x: 120, y: 0)
+spinNode.addChild(bluePlayer)
 
 //: Create blue trail, add as child of blue player and set `targetNode` to scene so particles are left behind as it moves
 let blueTrail = SKEmitterNode(fileNamed: "Blue")!
 blueTrail.targetNode = scene
-blueNode.addChild(blueTrail)
+bluePlayer.addChild(blueTrail)
 
 //: Animate rotation of `spinNode` for live view preview
 let rotate = SKAction.rotateByAngle(CGFloat(M_PI * 3 / 2), duration: 3)
