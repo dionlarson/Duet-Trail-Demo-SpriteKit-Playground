@@ -3,6 +3,7 @@ import Foundation
 import SpriteKit
 import XCPlayground
 let view = SKView(frame: NSRect(x: 0, y: 0, width: 320, height: 568))
+view.wantsLayer = true // fix for Playgrounds in Xcode 7.3
 let scene = SKScene(size: CGSize(width: 320, height: 568))
 view.presentScene(scene)
 XCPlaygroundPage.currentPage.liveView = view
